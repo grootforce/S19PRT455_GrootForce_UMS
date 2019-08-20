@@ -13,6 +13,7 @@ namespace Uni_Management_System.Controllers
         public IActionResult Index()
         {
             return View();
+            //test
         }
 
         public IActionResult Privacy()
