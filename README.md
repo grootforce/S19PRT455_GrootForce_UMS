@@ -1,1 +1,22 @@
-# S19PRT455_GrootForce_UMS
+# University Management System
+
+
+## Team "We are groot."
+```
+###Team Members:
+
+Name: Joel Benesha
+Student Number: s280615
+Email: 
+
+
+Name: Patrick Algeria
+Student Number: s290816
+Email: patrick.alegria7@gmail.com
+
+Name: Aasish Adhikari
+Student Number: s295819
+Email: gemini.aasis@gmail.com
+
+```
+
