@@ -10,3 +10,5 @@ git:
 Patrick Alegria 
 s290816
 git name: PatrickA7
+
+Timesheet: https://docs.google.com/spreadsheets/d/1dmL1aAtWWEhDS19qfJRfmnMaNjFWsbGRyntQhEt0EVk/edit?usp=sharing
