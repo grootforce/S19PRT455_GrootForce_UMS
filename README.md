@@ -3,7 +3,7 @@
 
 ## Team "We are groot."
 
-###Team Members:
+### Team Members:
 ```
 
 
@@ -22,7 +22,7 @@ Email: gemini.aasis@gmail.com
 
 ```
 
-###Timesheet Link:
-```
+### Timesheet Link:
+
 https://docs.google.com/spreadsheets/d/1dmL1aAtWWEhDS19qfJRfmnMaNjFWsbGRyntQhEt0EVk/edit?usp=sharing
-```
+
