@@ -3,6 +3,8 @@
 
 ## Team "We are groot."
 
+![Team image](https://image-cdn.neatoshop.com/styleimg/87716/none/black/default/419220-20;1559317350t.jpg)
+
 ### Team Members:
 ```
 
