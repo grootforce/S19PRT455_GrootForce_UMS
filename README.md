@@ -2,8 +2,10 @@
 
 
 ## Team "We are groot."
-```
+
 ###Team Members:
+```
+
 
 Name: Joel Benesha
 Student Number: s280615
@@ -20,3 +22,7 @@ Email: gemini.aasis@gmail.com
 
 ```
 
+###Timesheet Link:
+```
+https://docs.google.com/spreadsheets/d/1dmL1aAtWWEhDS19qfJRfmnMaNjFWsbGRyntQhEt0EVk/edit?usp=sharing
+```
