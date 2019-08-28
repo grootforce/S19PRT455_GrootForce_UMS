@@ -7,5 +7,9 @@ namespace Uni_Management_System.DAL
 {
     public class Students
     {
+        public int ID { get; set; }
+        public string name { get; set; }
+
+        public string course { get; set; }
     }
 }
