@@ -14,7 +14,7 @@ namespace Uni_Management_System.DAL
 
         }
 
-        public DbSet<Students> Students { get; set }
+        public DbSet<Students> Students { get; set; }
 
     }
 }
