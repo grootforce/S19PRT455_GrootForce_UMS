@@ -35,7 +35,6 @@ namespace Uni_Management_System
 
             services.AddDbContext<UMSContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
