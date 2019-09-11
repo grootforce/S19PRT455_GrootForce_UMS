@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Uni_Management_System.Models;
 
@@ -15,7 +16,7 @@ namespace Uni_Management_System.Controllers
             return View();
             //test
         }
-
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
