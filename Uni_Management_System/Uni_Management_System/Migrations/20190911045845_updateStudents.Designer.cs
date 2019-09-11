@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Uni_Management_System.DAL;
 
 namespace Uni_Management_System.Migrations
 {
     [DbContext(typeof(UMSContext))]
-    partial class UMSContextModelSnapshot : ModelSnapshot
+    [Migration("20190911045845_updateStudents")]
+    partial class updateStudents
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,8 +33,6 @@ namespace Uni_Management_System.Migrations
                     b.Property<string>("email");
 
                     b.Property<string>("name");
-
-                    b.Property<string>("studentNo");
 
                     b.HasKey("ID");
 
