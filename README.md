@@ -28,12 +28,12 @@ Email: gemini.aasis@gmail.com
 The repository setup that this project use and that works well with the branching model, is that with a central “truth” repo. Its a centralised workflow model where each developer pulls and pushes to origin without creating any peers to peers workflow to form sub teams. The branching model it follows are:
 
 ### The main branch
-Markup: * Master branch
+Markup : * Master branch
         * Develop branch
 
 ### Supporting Branch
 The supporting branch may branch from develop branch and should merge to develop branch. The supporting branch includes
-Markup: * Feature branches
+Markup : * Feature branches
         * Hotfix branches
         * Release branches
 
