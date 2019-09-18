@@ -13,10 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.name)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.course)
+                Student Number
+            </th>
+            <th>
+                Email Address
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Course
             </th>
             <th></th>
         </tr>
@@ -26,6 +35,15 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOfBirth)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.course)

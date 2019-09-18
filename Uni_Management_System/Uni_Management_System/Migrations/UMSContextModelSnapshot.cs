@@ -188,7 +188,13 @@ namespace Uni_Management_System.Migrations
 
                     b.Property<string>("course");
 
+                    b.Property<string>("dateOfBirth");
+
+                    b.Property<string>("email");
+
                     b.Property<string>("name");
+
+                    b.Property<string>("studentNo");
 
                     b.HasKey("ID");
 
