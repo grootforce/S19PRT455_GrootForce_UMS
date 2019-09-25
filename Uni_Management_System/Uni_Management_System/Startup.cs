@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SMS.DAL;
 using Uni_Management_System.DAL;
 
 namespace Uni_Management_System
@@ -40,6 +41,13 @@ namespace Uni_Management_System
             services.AddDefaultIdentity<IdentityUser>()
         .AddDefaultUI(UIFramework.Bootstrap4)
         .AddEntityFrameworkStores<UMSContext>();
+
+
+            services.AddDbContext<StudentContext_DAL>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+           sqlServerOptions => sqlServerOptions.MigrationsAssembly("SMS.DAL")
+           ));
+
 
             services.Configure<IdentityOptions>(options =>
             {

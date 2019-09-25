@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{87680143-290F-41BA-B69B-2DD0E6C902CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.DAL", "SMS.DAL\SMS.DAL.csproj", "{B6B48FAC-B733-4B5A-B6DD-851DCD8022DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{87680143-290F-41BA-B69B-2DD0E6C902CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87680143-290F-41BA-B69B-2DD0E6C902CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87680143-290F-41BA-B69B-2DD0E6C902CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B48FAC-B733-4B5A-B6DD-851DCD8022DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B48FAC-B733-4B5A-B6DD-851DCD8022DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B48FAC-B733-4B5A-B6DD-851DCD8022DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B48FAC-B733-4B5A-B6DD-851DCD8022DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
