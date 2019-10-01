@@ -15,6 +15,7 @@
 
 #setup file for database connection
 Uni_Management_System/Uni_Management_System/appsettings.json
+Uni_Management_System/Uni_Management_System/appsettings.Development.json
 
 # Build results
 [Dd]ebug/
