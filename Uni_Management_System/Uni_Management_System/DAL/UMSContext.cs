@@ -17,6 +17,7 @@ namespace Uni_Management_System.DAL
 
         public DbSet<Student> Student { get; set; }
         public DbSet<Progress> Progress { get; set; }
+        public DbSet<Course> Course { get; set; }
 
     }
 }
