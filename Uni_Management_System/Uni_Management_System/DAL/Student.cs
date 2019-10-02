@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace Uni_Management_System.DAL
 {
-    public class Students
+    public class Student
     {
         public int ID { get; set; }
 
         public string name { get; set; }
-
         public string studentNo { get; set; }
 
         public string email { get; set; }
@@ -18,7 +17,5 @@ namespace Uni_Management_System.DAL
         public string dateOfBirth { get; set; }
 
         public string course { get; set; }
-
-        
     }
 }

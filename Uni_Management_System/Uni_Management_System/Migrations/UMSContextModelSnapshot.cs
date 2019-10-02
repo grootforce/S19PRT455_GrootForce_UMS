@@ -136,9 +136,11 @@ namespace Uni_Management_System.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("ProviderKey");
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -169,9 +171,11 @@ namespace Uni_Management_System.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value");
 
@@ -180,7 +184,24 @@ namespace Uni_Management_System.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Uni_Management_System.DAL.Students", b =>
+            modelBuilder.Entity("Uni_Management_System.DAL.Progress", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("GPA");
+
+                    b.Property<int>("creditsCompleted");
+
+                    b.Property<int>("creditsRemaining");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Progress");
+                });
+
+            modelBuilder.Entity("Uni_Management_System.DAL.Student", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -198,7 +219,7 @@ namespace Uni_Management_System.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Students");
+                    b.ToTable("Student");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
