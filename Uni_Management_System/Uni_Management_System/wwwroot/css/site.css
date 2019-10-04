@@ -57,3 +57,8 @@ body {
         height: 90vh;
         object-fit: cover;
     }
+
+.login__wrap {
+    background: rgb(0,150,136);
+    background: linear-gradient(0deg, rgba(0,150,136,1) 0%, rgba(0,150,128,0.8379552504595589) 40%, rgba(6,161,89,0.6054622532606793) 100%);
+}
