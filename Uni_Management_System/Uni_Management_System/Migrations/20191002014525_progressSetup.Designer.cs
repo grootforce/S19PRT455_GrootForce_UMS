@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Uni_Management_System.DAL;
 
 namespace Uni_Management_System.Migrations
 {
     [DbContext(typeof(UMSContext))]
-    partial class UMSContextModelSnapshot : ModelSnapshot
+    [Migration("20191002014525_progressSetup")]
+    partial class progressSetup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,19 +186,6 @@ namespace Uni_Management_System.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Uni_Management_System.DAL.Course", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("unit");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Course");
-                });
-
             modelBuilder.Entity("Uni_Management_System.DAL.Progress", b =>
                 {
                     b.Property<int>("ID")
@@ -227,8 +216,6 @@ namespace Uni_Management_System.Migrations
                     b.Property<string>("email");
 
                     b.Property<string>("name");
-
-                    b.Property<string>("personality");
 
                     b.Property<string>("studentNo");
 

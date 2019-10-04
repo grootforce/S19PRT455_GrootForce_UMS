@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Uni_Management_System.DAL
 {
-    public class Students
+    public class Student
     {
         public int ID { get; set; }
 
@@ -19,6 +19,6 @@ namespace Uni_Management_System.DAL
 
         public string course { get; set; }
 
-        
+        public string personality { get; set; }
     }
 }

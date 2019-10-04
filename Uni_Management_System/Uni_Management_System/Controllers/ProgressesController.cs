@@ -9,22 +9,22 @@ using Uni_Management_System.DAL;
 
 namespace Uni_Management_System.Controllers
 {
-    public class StudentsController : Controller
+    public class ProgressesController : Controller
     {
         private readonly UMSContext _context;
 
-        public StudentsController(UMSContext context)
+        public ProgressesController(UMSContext context)
         {
             _context = context;
         }
 
-        // GET: Students
+        // GET: Progresses
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Student.ToListAsync());
+            return View(await _context.Progress.ToListAsync());
         }
 
-        // GET: Students/Details/5
+        // GET: Progresses/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace Uni_Management_System.Controllers
                 return NotFound();
             }
 
-            var student = await _context.Student
+            var progress = await _context.Progress
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (student == null)
+            if (progress == null)
             {
                 return NotFound();
             }
 
-            return View(student);
+            return View(progress);
         }
 
-        // GET: Students/Create
+        // GET: Progresses/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Progresses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,name,studentNo,email,dateOfBirth,course")] Student student)
+        public async Task<IActionResult> Create([Bind("ID,GPA,creditsCompleted,creditsRemaining")] Progress progress)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(student);
+                _context.Add(progress);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(student);
+            return View(progress);
         }
 
-        // GET: Students/Edit/5
+        // GET: Progresses/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +72,22 @@ namespace Uni_Management_System.Controllers
                 return NotFound();
             }
 
-            var student = await _context.Student.FindAsync(id);
-            if (student == null)
+            var progress = await _context.Progress.FindAsync(id);
+            if (progress == null)
             {
                 return NotFound();
             }
-            return View(student);
+            return View(progress);
         }
 
-        // POST: Students/Edit/5
+        // POST: Progresses/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,name,studentNo,email,dateOfBirth,course")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,GPA,creditsCompleted,creditsRemaining")] Progress progress)
         {
-            if (id != student.ID)
+            if (id != progress.ID)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace Uni_Management_System.Controllers
             {
                 try
                 {
-                    _context.Update(student);
+                    _context.Update(progress);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!StudentExists(student.ID))
+                    if (!ProgressExists(progress.ID))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace Uni_Management_System.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(student);
+            return View(progress);
         }
 
-        // GET: Students/Delete/5
+        // GET: Progresses/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +123,30 @@ namespace Uni_Management_System.Controllers
                 return NotFound();
             }
 
-            var student = await _context.Student
+            var progress = await _context.Progress
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (student == null)
+            if (progress == null)
             {
                 return NotFound();
             }
 
-            return View(student);
+            return View(progress);
         }
 
-        // POST: Students/Delete/5
+        // POST: Progresses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var student = await _context.Student.FindAsync(id);
-            _context.Student.Remove(student);
+            var progress = await _context.Progress.FindAsync(id);
+            _context.Progress.Remove(progress);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool StudentExists(int id)
+        private bool ProgressExists(int id)
         {
-            return _context.Student.Any(e => e.ID == id);
+            return _context.Progress.Any(e => e.ID == id);
         }
     }
 }

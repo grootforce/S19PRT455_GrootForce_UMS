@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Uni_Management_System.DAL.Students>
+﻿@model IEnumerable<Uni_Management_System.DAL.Student>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                Name
+                @Html.DisplayNameFor(model => model.name)
             </th>
             <th>
-                Student Number
+                @Html.DisplayNameFor(model => model.studentNo)
             </th>
             <th>
-                Email Address
+                @Html.DisplayNameFor(model => model.email)
             </th>
             <th>
-                Date of Birth
+                @Html.DisplayNameFor(model => model.dateOfBirth)
             </th>
             <th>
-                Course
+                @Html.DisplayNameFor(model => model.course)
             </th>
             <th></th>
         </tr>
