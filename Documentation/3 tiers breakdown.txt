@@ -1,0 +1,21 @@
+DAL
+CRUD OPERATION FOR STUDENTS
+RETIEVE PERSONALITY TEST
+add student grades
+- add user details 
+
+
+
+BLL
+-validation of student ENROLMENT 
+- Validation of student grade
+- logic for displaying graph 
+- calculate average grades for class
+
+
+presentation 
+
+-output personality test result
+- user profile 
+- output 
+- class graph display 
