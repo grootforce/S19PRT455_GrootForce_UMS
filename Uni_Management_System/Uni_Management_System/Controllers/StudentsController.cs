@@ -19,9 +19,16 @@ namespace Uni_Management_System.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Student.ToListAsync());
+        public async Task<IActionResult> Index(string searchString)
+        {   //Handle searching by name
+            var students = from s in _context.Student
+                         select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.name.Contains(searchString));
+            }
+            return View(await students.ToListAsync());
         }
 
         // GET: Students/Details/5
