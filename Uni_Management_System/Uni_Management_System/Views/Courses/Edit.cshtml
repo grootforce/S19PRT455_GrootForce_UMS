@@ -19,6 +19,21 @@
                 <span asp-validation-for="unit" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="unitCode" class="control-label"></label>
+                <input asp-for="unitCode" class="form-control" />
+                <span asp-validation-for="unitCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="time" class="control-label"></label>
+                <input asp-for="time" class="form-control" />
+                <span asp-validation-for="time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="location" class="control-label"></label>
+                <input asp-for="location" class="form-control" />
+                <span asp-validation-for="location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
