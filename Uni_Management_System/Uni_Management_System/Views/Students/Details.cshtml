@@ -4,7 +4,53 @@
     ViewData["Title"] = "Details";
 }
 
+    <link rel="stylesheet" href="~/css/profile.css" />
+
+<!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
+
+<aside class="profile-card">
+
+    <header>
+
+        <!-- the username -->
+        <h1>@Html.DisplayFor(model => model.name)</h1>
+
+        <!-- and role or location -->
+        <h2>Student</h2>
+
+    </header>
+
+    <!-- bit of a bio; who are you? -->
+    <div class="profile-bio">
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.studentNo)</h3>
+            <p>@Html.DisplayFor(model => model.studentNo)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.email)</h3>
+            <p>@Html.DisplayFor(model => model.email)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.dateOfBirth)</h3>
+            <p>@Html.DisplayFor(model => model.dateOfBirth)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.course)</h3>
+            <p>@Html.DisplayFor(model => model.course)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.personality)</h3>
+            <p>@Html.DisplayFor(model => model.personality)</p>
+        </div>
+    </div>
+
+    
+
+</aside>
+<!-- that’s all folks! -->
+<!--
 <h1>Details</h1>
+
 
 <div>
     <h4>Student</h4>
@@ -48,6 +94,7 @@
         </dd>
     </dl>
 </div>
+    -->
 <div>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
     <a asp-action="Index">Back to List</a>
