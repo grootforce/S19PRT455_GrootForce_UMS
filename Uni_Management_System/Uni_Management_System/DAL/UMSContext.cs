@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Uni_Management_System.DAL
 {
-    public class UMSContext : IdentityDbContext
+    public class UMSContext : IdentityDbContext<ApplicationUser>
     {
 
         public UMSContext(DbContextOptions<UMSContext> options) : base(options)
@@ -19,5 +19,11 @@ namespace Uni_Management_System.DAL
         public DbSet<Progress> Progress { get; set; }
         public DbSet<Course> Course { get; set; }
 
+        //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+        }
     }
-}

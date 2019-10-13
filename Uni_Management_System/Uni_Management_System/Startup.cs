@@ -37,7 +37,7 @@ namespace Uni_Management_System
 
             services.AddDbContext<UMSContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<ApplicationUser>()
         .AddDefaultUI(UIFramework.Bootstrap4)
         .AddEntityFrameworkStores<UMSContext>();
 
