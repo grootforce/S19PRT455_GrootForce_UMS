@@ -19,9 +19,16 @@ namespace Uni_Management_System.Controllers
         }
 
         // GET: Courses
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Course.ToListAsync());
+        public async Task<IActionResult> Index(string searchString)
+        {   //Handle searching by name
+            var units = from s in _context.Course
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                units = units.Where(s => s.unit.Contains(searchString));
+            }
+            return View(await units.ToListAsync());
         }
 
         // GET: Courses/Details/5
@@ -53,7 +60,7 @@ namespace Uni_Management_System.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,unit")] Course course)
+        public async Task<IActionResult> Create([Bind("ID,unit,unitCode,time,location")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +92,7 @@ namespace Uni_Management_System.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,unit")] Course course)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,unit,unitCode,time,location")] Course course)
         {
             if (id != course.ID)
             {

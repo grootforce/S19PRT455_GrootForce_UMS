@@ -342,3 +342,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+Uni_Management_System/Uni_Management_System/Migrations/
+Uni_Management_System/Uni_Management_System/appsettings.Development.json

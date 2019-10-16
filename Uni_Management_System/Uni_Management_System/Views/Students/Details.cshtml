@@ -4,44 +4,98 @@
     ViewData["Title"] = "Details";
 }
 
+    <link rel="stylesheet" href="~/css/profile.css" />
+
+<aside class="profile-card">
+
+    <header>
+        <a>
+            <!--avatar (placeholder for now)-->
+            <img src="~/images/profile-image.jpg" />
+        </a>
+        <!-- Name -->
+        <h1>@Html.DisplayFor(model => model.name)</h1>
+
+        <!-- Role -->
+        <h2>Student</h2>
+
+
+    </header>
+
+    <!-- Details -->
+    <div class="profile-bio">
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.studentNo)</h3>
+            <p>@Html.DisplayFor(model => model.studentNo)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.email)</h3>
+            <p>@Html.DisplayFor(model => model.email)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.dateOfBirth)</h3>
+            <p>@Html.DisplayFor(model => model.dateOfBirth)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.course)</h3>
+            <p>@Html.DisplayFor(model => model.course)</p>
+        </div>
+        <div class="data-section">
+            <h3>@Html.DisplayNameFor(model => model.personality)</h3>
+            <p>@Html.DisplayFor(model => model.personality)</p>
+        </div>
+    </div>
+
+    
+
+</aside>
+<!--
 <h1>Details</h1>
+
 
 <div>
     <h4>Student</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            Name
+            @Html.DisplayNameFor(model => model.name)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.name)
         </dd>
         <dt class = "col-sm-2">
-            Student Number
+            @Html.DisplayNameFor(model => model.studentNo)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.studentNo)
         </dd>
         <dt class = "col-sm-2">
-            Email Address
+            @Html.DisplayNameFor(model => model.email)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.email)
         </dd>
         <dt class = "col-sm-2">
-            Date of Birth
+            @Html.DisplayNameFor(model => model.dateOfBirth)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.dateOfBirth)
         </dd>
         <dt class = "col-sm-2">
-            Course
+            @Html.DisplayNameFor(model => model.course)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.course)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.personality)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.personality)
+        </dd>
     </dl>
 </div>
+    -->
 <div>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
     <a asp-action="Index">Back to List</a>
