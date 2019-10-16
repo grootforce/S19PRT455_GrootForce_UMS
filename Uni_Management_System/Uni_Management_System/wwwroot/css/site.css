@@ -62,3 +62,34 @@ body {
     background: rgb(0,150,136);
     background: linear-gradient(0deg, rgba(0,150,136,1) 0%, rgba(0,150,128,0.8379552504595589) 40%, rgba(6,161,89,0.6054622532606793) 100%);
 }
+
+.two-factor__background {
+    height: 100vh;
+    background-image: url(/images/undraw_security.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-footer {
+    background-color: #004f1e;
+}
+
+.header__bg {
+  
+    height: 90vh;
+    background-image: url(/images/student.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1.text-white {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+h3.header_text {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
