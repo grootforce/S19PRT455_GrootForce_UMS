@@ -18,4 +18,11 @@ namespace Uni_Management_System.DAL
         [Display(Name = "Credits Remaining")]
         public int creditsRemaining { get; set; }
     }
+
+    public class Progresses
+    {
+        private int ID;
+        private int GPA;
+        private int creditsCompleted;
+    }
 }
