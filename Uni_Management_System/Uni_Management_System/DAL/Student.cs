@@ -28,4 +28,15 @@ namespace Uni_Management_System.DAL
         [Display(Name = "Personality")]
         public string personality { get; set; }
     }
+
+    public class Students
+    {
+        private int ID;
+        private string name;
+        private string studentNo;
+        private string email;
+        private string dateOfBirth;
+        private string course;
+        private string personality;
+    }
 }
