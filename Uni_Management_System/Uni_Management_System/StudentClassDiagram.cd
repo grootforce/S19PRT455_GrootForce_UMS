@@ -1,2 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Uni_Management_System.DAL.Students">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAEAgAAgAAAAAAAAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>DAL\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Uni_Management_System.DAL.Courses">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAggAAAAgAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Uni_Management_System.DAL.Progresses">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABAAAAAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Progress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

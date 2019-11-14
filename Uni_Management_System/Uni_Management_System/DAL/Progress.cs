@@ -22,7 +22,8 @@ namespace Uni_Management_System.DAL
     public class Progresses
     {
         private int ID;
-        private int GPA;
+        private decimal GPA;
         private int creditsCompleted;
+        private int creditsRemaining;
     }
 }

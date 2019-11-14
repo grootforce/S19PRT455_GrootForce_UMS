@@ -23,4 +23,13 @@ namespace Uni_Management_System.DAL
         public string location { get; set; }
 
     }
+
+    public class Courses
+    {
+        private int ID;
+        private string unit;
+        private string unitCode;
+        private string time;
+        private string location;
+    }
 }
