@@ -4,9 +4,118 @@
     ViewData["Title"] = "Index";
 }
 
+@*<<<<<<< Updated upstream
     <div class="container">
         <div class="row">
 
+=======*@
+@*<h1>Student Register</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<!--Markup for Search box-->
+@*<form asp-controller="Students" asp-action="Index">
+    <p>
+        Name: <input type="text" name="SearchString">
+        <input type="submit" value="Search" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Student Number
+            </th>
+            <th>
+                Email Address
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Course
+            </th>
+            <th>
+                Personality
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.name)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.course)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.personality)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+@*<div class="container">
+    <div class="row">
+       
+    </div>
+    <div class="row">
+        <div class="col col-md-7 m-3 d-flex flex-column">
+            <div>
+                <h1>Your profile</h1>
+            </div>
+            <div>
+                <h4>Name:</h4>
+                <p></p>
+            </div>
+            <div>
+                <h4>Student Number:</h4>
+                <p></p>
+            </div>
+            <div>
+                <h4>Email:</h4>
+                <p></p>
+            </div>
+            <div>
+                <h4>Date of Birth:</h4>
+                <p></p>
+            </div>
+            <div>
+                <h4>Course:</h4>
+                <p></p>
+            </div>
+            <div>
+                <h4>Personality:</h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="col col-md-4 m-3 ">
+            <div  class="text-center">
+                <h1>Your personality</h1>
+                <img src="~/images/insp.png" alt="Personality Image" />
+                <h4>ISTP-j</h4>
+            </div>
+>>>>>>> Stashed changes*@
         </div>
         @foreach (var item in Model)
         {
