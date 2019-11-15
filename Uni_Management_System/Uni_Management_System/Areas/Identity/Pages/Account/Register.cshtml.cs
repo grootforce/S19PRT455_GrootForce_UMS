@@ -64,7 +64,7 @@ namespace Uni_Management_System.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/Profile/Edit");
+            returnUrl = returnUrl ?? Url.Content("~/Students/Create");
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };

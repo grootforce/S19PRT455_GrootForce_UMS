@@ -3,59 +3,56 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<!--Markup for Search box-->
-<form asp-controller="Courses" asp-action="Index">
-    <p>
-        Name: <input type="text" name="SearchString">
-        <input type="submit" value="Unit Name" />
-    </p>
-</form>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.unit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.unitCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.location)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.unit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.unitCode)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.time)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.location)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="container">
+        <h1>Your Course</h1>
+        
+        <!--Markup for Search box-->
+        <form asp-controller="Courses" asp-action="Index">
+            <p>
+                Name: <input type="text" name="SearchString">
+                <input type="submit" value="Unit Name" />
+            </p>
+        </form>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.unit)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.unitCode)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.time)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.location)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.unit)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.unitCode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.time)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.location)
+                        </td>
+                        <td>
+                            <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                            <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
